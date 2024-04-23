@@ -1,0 +1,75 @@
+﻿FUNCTION_BLOCK "Serie de Fourier"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      "Enable Serie" : Bool;
+      "Tm (ms)" : Real;
+      Amplitud : Real;
+      "Periodo (s)" : Real;
+      N_Fourier : Int;
+   END_VAR
+
+   VAR_OUTPUT 
+      "Serie f(t)" : Real;
+   END_VAR
+
+   VAR 
+      cont { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+   END_VAR
+
+   VAR_TEMP 
+      t : Real;
+      n : Int;
+      suma : Real;
+   END_VAR
+
+   VAR CONSTANT 
+      PI : Real := 3.1416;
+   END_VAR
+
+
+BEGIN
+	IF #"Enable Serie" THEN
+	    //------------------------------Tiempo t(seg) en forma de puntos------------------------------
+	    #cont := #cont + 1;
+	    IF #cont > REAL_TO_INT(1000 * #"Periodo (s)" / #"Tm (ms)") THEN // Si cont > Periodo en forma de puntos
+	        #cont := 0;
+	    END_IF;
+	    
+	    #t := #cont * #"Tm (ms)" / 1000.0; //tiempo t en (seg)
+	    
+	    //------------Serie de Fourier------------
+	    FOR #n := 1 TO #N_Fourier DO
+	        IF #"Enable Serie" = TRUE THEN
+	            //Onda Completa
+	            #suma := #suma + (COS(#n * 2 * #PI * #t / #"Periodo (s)")) / (4 * SQRT(#n) - 1); //Sumatoria infinita
+	        ELSE
+	            #suma := 0;
+	        END_IF;
+	        
+	    END_FOR;
+	    
+	    IF #"Enable Serie" = TRUE THEN
+	        //Onda Completa
+	        #"Serie f(t)" := (2 * #Amplitud / #PI) - (4 * #Amplitud / #PI) * #suma; //
+	    ELSE
+	        #"Serie f(t)" := 0;
+	    END_IF;
+	ELSE
+	    
+	    #t := 0;
+	    #suma:=0;
+	    #"Serie f(t)" := 0;
+	  
+	END_IF;
+	
+	
+	    
+	
+	
+	    
+	
+	
+	
+END_FUNCTION_BLOCK
+

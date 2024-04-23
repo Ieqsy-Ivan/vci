@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-04-23T10:19:31.9118753Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC UA Professional</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="Input" />
+  <Section Name="Output">
+    <Member Name="SenOUT" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="InOut">
+    <Member Name="SenIN" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Static">
+    <Member Name="Pulso1ms" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="AuxPulso1ms" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="AuxFlancoPulso4ms" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="Flanco4ms" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="SenAUX" Datatype="Real" />
+    <Member Name="SenIN-Radianes" Datatype="Real" />
+  </Section>
+  <Section Name="Constant">
+    <Member Name="PI" Datatype="Real" Accessibility="Public">
+      <StartValue>3.1416</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>Calculo de Seno</Name>
+      <Number>1</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Pasar de grados a radianes</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Access Scope="GlobalVariable" UId="21">
+    <Symbol UId="22">
+      <Component Name="Timer1" UId="23" />
+    </Symbol>
+  </Access>
+  <Token Text="." UId="24" />
+  <Access Scope="Call" UId="25">
+    <Instruction Name="TON" UId="26">
+      <Token Text="(" UId="27" />
+      <Parameter Name="IN" UId="28">
+        <Blank Num="1" UId="29" />
+        <Token Text=":=" UId="30" />
+        <Blank Num="1" UId="31" />
+        <Access Scope="LocalVariable" UId="32">
+          <Symbol UId="33">
+            <Component Name="AuxPulso1ms" UId="34" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="35" />
+      <NewLine Num="1" UId="36" />
+      <Blank Num="13" UId="37" />
+      <Parameter Name="PT" UId="38">
+        <Blank Num="1" UId="39" />
+        <Token Text=":=" UId="40" />
+        <Blank Num="1" UId="41" />
+        <Access Scope="TypedConstant" UId="42">
+          <Constant UId="43">
+            <ConstantValue UId="44">T#10ms</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="45" />
+      <NewLine Num="1" UId="46" />
+      <Blank Num="13" UId="47" />
+      <Parameter Name="Q" UId="48">
+        <Blank Num="1" UId="49" />
+        <Token Text="=&gt;" UId="50" />
+        <Blank Num="1" UId="51" />
+        <Access Scope="LocalVariable" UId="52">
+          <Symbol UId="53">
+            <Component Name="Pulso1ms" UId="54" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="55" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="56" />
+  <NewLine Num="2" UId="57" />
+  <Access Scope="GlobalVariable" UId="58">
+    <Symbol UId="59">
+      <Component Name="Timer2" UId="60" />
+    </Symbol>
+  </Access>
+  <Token Text="." UId="61" />
+  <Access Scope="Call" UId="62">
+    <Instruction Name="TOF" UId="63">
+      <Token Text="(" UId="64" />
+      <Parameter Name="IN" UId="65">
+        <Blank Num="1" UId="66" />
+        <Token Text=":=" UId="67" />
+        <Blank Num="1" UId="68" />
+        <Token Text="NOT" UId="69" />
+        <Blank Num="1" UId="70" />
+        <Access Scope="LocalVariable" UId="71">
+          <Symbol UId="72">
+            <Component Name="Pulso1ms" UId="73" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="74" />
+      <NewLine Num="1" UId="75" />
+      <Blank Num="13" UId="76" />
+      <Parameter Name="PT" UId="77">
+        <Blank Num="1" UId="78" />
+        <Token Text=":=" UId="79" />
+        <Blank Num="1" UId="80" />
+        <Access Scope="TypedConstant" UId="81">
+          <Constant UId="82">
+            <ConstantValue UId="83">T#10ms</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="84" />
+      <NewLine Num="1" UId="85" />
+      <Blank Num="13" UId="86" />
+      <Parameter Name="Q" UId="87">
+        <Blank Num="1" UId="88" />
+        <Token Text="=&gt;" UId="89" />
+        <Blank Num="1" UId="90" />
+        <Access Scope="LocalVariable" UId="91">
+          <Symbol UId="92">
+            <Component Name="AuxPulso1ms" UId="93" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="94" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="95" />
+  <NewLine Num="2" UId="96" />
+  <Access Scope="LocalVariable" UId="97">
+    <Symbol UId="98">
+      <Component Name="Flanco4ms" UId="99" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="100" />
+  <Token Text=":=" UId="101" />
+  <Blank Num="1" UId="102" />
+  <Token Text="NOT" UId="103" />
+  <Blank Num="1" UId="104" />
+  <Access Scope="LocalVariable" UId="105">
+    <Symbol UId="106">
+      <Component Name="Flanco4ms" UId="107" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="108" />
+  <Token Text="AND" UId="109" />
+  <Blank Num="1" UId="110" />
+  <Access Scope="LocalVariable" UId="111">
+    <Symbol UId="112">
+      <Component Name="Pulso1ms" UId="113" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="114" />
+  <NewLine Num="2" UId="115" />
+  <Token Text="IF" UId="116" />
+  <Blank Num="1" UId="117" />
+  <Access Scope="LocalVariable" UId="118">
+    <Symbol UId="119">
+      <Component Name="Pulso1ms" UId="120" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="121" />
+  <Token Text="THEN" UId="122" />
+  <NewLine Num="1" UId="123" />
+  <Blank Num="4" UId="124" />
+  <Access Scope="LocalVariable" UId="125">
+    <Symbol UId="126">
+      <Component Name="SenIN" UId="127" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="128" />
+  <Token Text=":=" UId="129" />
+  <Blank Num="1" UId="130" />
+  <Access Scope="LocalVariable" UId="131">
+    <Symbol UId="132">
+      <Component Name="SenIN" UId="133" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="134" />
+  <Token Text="+" UId="135" />
+  <Blank Num="1" UId="136" />
+  <Access Scope="LiteralConstant" UId="137">
+    <Constant UId="138">
+      <ConstantValue UId="140">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="141" />
+  <NewLine Num="1" UId="142" />
+  <Token Text="END_IF" UId="143" />
+  <Token Text=";" UId="144" />
+  <NewLine Num="2" UId="145" />
+  <Token Text="IF" UId="146" />
+  <Blank Num="1" UId="147" />
+  <Access Scope="LocalVariable" UId="148">
+    <Symbol UId="149">
+      <Component Name="SenIN" UId="150" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="151" />
+  <Token Text="&gt;=" UId="152" />
+  <Blank Num="1" UId="153" />
+  <Access Scope="LiteralConstant" UId="154">
+    <Constant UId="155">
+      <ConstantValue UId="157">360.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="158" />
+  <Token Text="THEN" UId="159" />
+  <NewLine Num="1" UId="160" />
+  <Blank Num="4" UId="161" />
+  <Access Scope="LocalVariable" UId="162">
+    <Symbol UId="163">
+      <Component Name="SenIN" UId="164" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="165" />
+  <Token Text=":=" UId="166" />
+  <Blank Num="1" UId="167" />
+  <Access Scope="LiteralConstant" UId="168">
+    <Constant UId="169">
+      <ConstantValue UId="171">0.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="172" />
+  <NewLine Num="1" UId="173" />
+  <Token Text="END_IF" UId="174" />
+  <Token Text=";" UId="175" />
+  <NewLine Num="2" UId="176" />
+  <Access Scope="LocalVariable" UId="177">
+    <Symbol UId="178">
+      <Component Name="SenIN-Radianes" UId="179" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="180" />
+  <Token Text=":=" UId="181" />
+  <Blank Num="1" UId="182" />
+  <Token Text="(" UId="183" />
+  <Access Scope="LocalVariable" UId="184">
+    <Symbol UId="185">
+      <Component Name="SenIN" UId="186" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="187" />
+  <Token Text="*" UId="188" />
+  <Blank Num="1" UId="189" />
+  <Access Scope="LocalConstant" UId="190">
+    <Constant Name="PI" UId="191" />
+  </Access>
+  <Token Text=")" UId="194" />
+  <Blank Num="1" UId="195" />
+  <Token Text="/" UId="196" />
+  <Blank Num="1" UId="197" />
+  <Access Scope="LiteralConstant" UId="198">
+    <Constant UId="199">
+      <ConstantValue UId="201">180.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="202" />
+  <NewLine Num="2" UId="203" />
+  <Access Scope="LocalVariable" UId="204">
+    <Symbol UId="205">
+      <Component Name="SenOUT" UId="206" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="207" />
+  <Token Text=":=" UId="208" />
+  <Blank Num="1" UId="209" />
+  <Access Scope="Call" UId="210">
+    <Instruction Name="SIN" UId="211">
+      <Token Text="(" UId="212" />
+      <NamelessParameter UId="213">
+        <Access Scope="LocalVariable" UId="214">
+          <Symbol UId="215">
+            <Component Name="SenIN-Radianes" UId="216" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="218" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="219" />
+  <NewLine Num="4" UId="220" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="D" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>
